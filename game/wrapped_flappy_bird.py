@@ -56,7 +56,7 @@ pygame.init()
 
 
 FPSCLOCK = pygame.time.Clock()
-# SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENWIDTH))
+SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENWIDTH))
 SCREEN = pygame.Surface((SCREENWIDTH, SCREENWIDTH))
 # SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
 
