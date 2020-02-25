@@ -10,7 +10,8 @@ from pygame.locals import *
 import pygame.surfarray as surfarray
 from keras.utils import to_categorical
 from skimage.color import rgb2gray
-
+from skimage.transform import resize
+from skimage.exposure import rescale_intensity
 
 """
 import pygame
@@ -75,8 +76,8 @@ PLAYER_INDEX_GEN = cycle([0, 1, 2, 1])
 
 def gray_and_resize(x_t1_colored):
     x_t1 = rgb2gray(x_t1_colored)
-    x_t1 = skimage.transform.resize(x_t1, (80, 80))
-    x_t1 = skimage.exposure.rescale_intensity(x_t1, out_range=(0, 255))
+    x_t1 = resize(x_t1, (80, 80))
+    x_t1 = rescale_intensity(x_t1, out_range=(0, 255))
     x_t1 = x_t1.reshape(1, x_t1.shape[0], x_t1.shape[1], 1)
     return x_t1
 
