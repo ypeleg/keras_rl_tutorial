@@ -217,8 +217,8 @@ class GameState:
 
 
         image_data = pygame.surfarray.array3d(pygame.display.get_surface())
-        if not NOTEBOOK:
-            pygame.display.update()
+        # if not NOTEBOOK:
+        pygame.display.update()
         #print ("FPS" , FPSCLOCK.get_fps())
         FPSCLOCK.tick(FPS)
         #print self.upperPipes[0]['y'] + PIPE_HEIGHT - int(BASEY * 0.2)
