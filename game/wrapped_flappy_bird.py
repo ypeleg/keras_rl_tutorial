@@ -99,19 +99,6 @@ from keras.models import Sequential
 from keras.layers import Dense, Activation, Flatten, Convolution2D, Permute
 from keras.optimizers import Adam
 
-from rl.callbacks import Callback
-from rl.agents.dqn import DQNAgent
-from rl.policy import LinearAnnealedPolicy, BoltzmannQPolicy, EpsGreedyQPolicy
-from rl.memory import SequentialMemory
-from rl.core import Processor
-from rl.callbacks import FileLogger, ModelIntervalCheckpoint
-
-class Render(Callback):
-    def on_step_end(self, step, logs={}):
-        plt.clf()
-        plt.imshow(env.render(mode='rgb_array'))
-        display.display(plt.gcf())
-        display.clear_output(wait=True)
 
 
 class GameState:
