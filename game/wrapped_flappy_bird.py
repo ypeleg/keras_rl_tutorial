@@ -53,11 +53,9 @@ os.chdir('/content')
 pygame.init()
 # pygame.display.init()
 # print( pygame.display.list_modes() )
-
-
 FPSCLOCK = pygame.time.Clock()
 SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENWIDTH))
-SCREEN = pygame.Surface((SCREENWIDTH, SCREENWIDTH))
+# SCREEN = pygame.Surface((SCREENWIDTH, SCREENWIDTH))
 # SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
 
 pygame.display.set_caption('Flappy Bird')
