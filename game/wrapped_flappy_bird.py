@@ -63,7 +63,7 @@ pygame.init()
 # pygame.display.init()
 # print( pygame.display.list_modes() )
 FPSCLOCK = pygame.time.Clock()
-SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
+SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT), 0, 32)
 # SCREEN = pygame.Surface((SCREENWIDTH, SCREENWIDTH))
 # SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
 
@@ -227,7 +227,7 @@ class GameState:
 
         image_data = pygame.surfarray.array3d(pygame.display.get_surface())
         # if not NOTEBOOK:
-        self.screen.update()
+        # self.screen.update()
         pygame.display.update()
         #print ("FPS" , FPSCLOCK.get_fps())
         FPSCLOCK.tick(FPS)
