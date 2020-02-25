@@ -50,6 +50,15 @@ os.chdir('PyGame-Learning-Environment')
 !pip install pygame
 os.chdir('/content')
 """
+
+os.environ['SDL_VIDEODRIVER'] = 'dummy'
+pygame.init()
+pygame.display.set_mode((1,1))
+
+# surface alone wouldn't work so I needed to add a rectangle
+screen = pygame.Surface((400, 400), pygame.SRCALPHA, 32)
+pygame.draw.rect(screen, (0,0,0), (0, 0, 400, 400), 0)
+
 pygame.init()
 # pygame.display.init()
 # print( pygame.display.list_modes() )
@@ -104,7 +113,8 @@ from keras.optimizers import Adam
 
 
 class GameState:
-    def __init__(self):
+    def __init__(self, screen):
+        self.screen = screen
         self.score = self.playerIndex = self.loopIter = 0
         self.playerx = int(SCREENWIDTH * 0.2)
         self.playery = int((SCREENHEIGHT - PLAYER_HEIGHT) / 2)
@@ -217,6 +227,7 @@ class GameState:
 
         image_data = pygame.surfarray.array3d(pygame.display.get_surface())
         # if not NOTEBOOK:
+        self.screen.update()
         pygame.display.update()
         #print ("FPS" , FPSCLOCK.get_fps())
         FPSCLOCK.tick(FPS)
