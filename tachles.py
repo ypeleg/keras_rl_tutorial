@@ -10,7 +10,7 @@ tf.logging.set_verbosity(tf.logging.ERROR)
 
 import keras
 from keras.datasets import mnist
-
+import keras.backend as K
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
