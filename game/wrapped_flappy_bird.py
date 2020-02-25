@@ -51,7 +51,7 @@ os.chdir('PyGame-Learning-Environment')
 os.chdir('/content')
 """
 
-os.environ['SDL_VIDEODRIVER'] = 'dummy'
+# os.environ['SDL_VIDEODRIVER'] = 'dummy'
 pygame.init()
 pygame.display.set_mode((1,1))
 
@@ -113,7 +113,7 @@ from keras.optimizers import Adam
 
 
 class GameState:
-    def __init__(self, screen):
+    def __init__(self):
         self.screen = screen
         self.score = self.playerIndex = self.loopIter = 0
         self.playerx = int(SCREENWIDTH * 0.2)
