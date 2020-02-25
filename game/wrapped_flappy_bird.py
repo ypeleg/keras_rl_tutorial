@@ -82,11 +82,11 @@ import keras
 
 from tensorflow.python.client import device_lib
 device_lib.list_local_devices()
-print 'Running! \nPlease dont interrupt this cell. It might cause serious issues..'
+
 # !pip install gym keras-rl pyglet==1.2.4
 # !apt-get install -y cmake zlib1g-dev libjpeg-dev xvfb ffmpeg xorg-dev python-opengl libboost-all-dev libsdl2-dev swig
 # !pip install 'gym[atari]'
-print 'Done!'
+
 
 import matplotlib.pyplot as plt
 import numpy as np
