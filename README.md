@@ -25,7 +25,7 @@
 ##  tl;dr: 
 ------
 <center><strong>0.0.0 - Preamble</strong>
-<a href="https://colab.research.google.com/github/ypeleg/keras_rl_tutorial/blob/master/0.0.0%20Preamble.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></center>
+<a href="https://colab.research.google.com/github/ypeleg/keras_rl_tutorial/blob/master/0.0.0%20-%20Preamble.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></center>
 <br>
 <center><strong>0.0.1 - Demo1</strong>
 <a href="https://colab.research.google.com/github/ypeleg/keras_rl_tutorial/blob/master/0.0.1%20-%20Demo1.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></center>
