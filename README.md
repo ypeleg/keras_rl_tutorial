@@ -13,7 +13,7 @@
 
 <div>
     <center><img src="imgs/keras_logo_humans.png" width="30%"/>
-    <h1>www.github.com/ypeleg/ExpertDL</h1></center>
+    <h1>www.github.com/ypeleg/keras_rl_tutorial</h1></center>
 <div>
 
 
