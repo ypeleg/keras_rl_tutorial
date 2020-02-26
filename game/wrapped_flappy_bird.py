@@ -111,9 +111,12 @@ from keras.layers import Dense, Activation, Flatten, Convolution2D, Permute
 from keras.optimizers import Adam
 
 
+class DummyActionSpace():
+    n = 2
 
 class GameState:
     def __init__(self):
+        self.action_space = DummyActionSpace
         self.screen = screen
         self.score = self.playerIndex = self.loopIter = 0
         self.playerx = int(SCREENWIDTH * 0.2)
@@ -235,18 +238,21 @@ class GameState:
 
         ### plot image data
         # image_data
-        print(image_data.shape)
-        print(np.transpose(image_data, axes=[1, 0, 2]).shape)
+        # print(image_data.shape)
+        # print(np.transpose(image_data, axes=[1, 0, 2]).shape)
         if NOTEBOOK:
             plt.clf()
             plt.imshow(np.transpose(image_data, axes=[1, 0, 2]))
             display.display(plt.gcf())
             display.clear_output(wait=True)
-
         ### plot image data
-
-
         return gray_and_resize(image_data), reward, terminal
+    
+    def reset(self): 
+        self.__init__()
+        return np.zeros((80, 80))
+
+    def render(self, mode='human'): pass
 
 def getRandomPipe():
     """returns a randomly generated pipe"""
