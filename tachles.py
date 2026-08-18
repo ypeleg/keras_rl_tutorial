@@ -9,6 +9,7 @@ tf.logging.set_verbosity(tf.logging.ERROR)
 
 
 import keras
+from keras import backend as K
 from keras.datasets import mnist
 import keras.backend as K
 import numpy as np
